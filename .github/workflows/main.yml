@@ -25,8 +25,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run tests in Chrome
-        run: npx playwright test --project=chrome --reporter=html
+      - name: Run tests in Chromium
+        run: npx playwright test --project=chromium --reporter=html
 
       - name: Upload test report
         if: always()
