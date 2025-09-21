@@ -35,4 +35,9 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report
+          
+      - name: Deploy Playwright report to GitHub Pages
+        uses: actions/deploy-pages@v1
+        with:
+          folder: playwright-report
 
