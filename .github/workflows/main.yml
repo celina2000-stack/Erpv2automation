@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/upload-artifact@v4
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -26,11 +26,12 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run tests in Chrome
-        run: npx playwright test --project=chrome
+        run: npx playwright test --project=chrome --reporter=html
 
-      - name: Upload test results
+      - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-results
+          name: playwright-report
           path: playwright-report
+
