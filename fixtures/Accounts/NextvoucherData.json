@@ -1,0 +1,56 @@
+{
+  "Zeronextvouchernum": {
+    "accountingYear": "A/Y 2081/82",
+    "listItem": "Purchase Voucher",
+    "nextVoucherNum": "0",
+    "zeroMask": "0000",
+    "isDefault": false,
+    "voucherPrefix": "",
+    "voucherPostfix": ""
+  },
+  "Negativevouchernum": {
+    "accountingYear": "A/Y 2081/82",
+    "listItem": "Purchase Voucher",
+    "nextVoucherNum": "-1",
+    "zeroMask": "0000",
+    "isDefault": false,
+    "voucherPrefix": "",
+    "voucherPostfix": ""
+  },
+  "emptyZeroMask": {
+    "accountingYear": "A/Y 2081/82",
+    "listItem": "Purchase Voucher",
+    "nextVoucherNum": "1",
+    "zeroMask": " ",
+    "isDefault": false,
+    "voucherPrefix": "",
+    "voucherPostfix": ""
+  },
+  "invalidZeroMask": {
+   "accountingYear": "A/Y 2081/82",
+    "listItem": "Purchase Voucher",
+    "nextVoucherNum": "1",
+    "zeroMask": "11",
+    "isDefault": false,
+    "voucherPrefix": "",
+    "voucherPostfix": ""
+  },
+  "alreadyExists": {
+    "accountingYear": "A/Y 2081/82",
+    "listItem": "Purchase Voucher",
+    "nextVoucherNum": "2",
+    "zeroMask": "0000",
+    "isDefault": false,
+    "voucherPrefix": "",
+    "voucherPostfix": ""
+  },
+   "valid": {
+    "accountingYear": "A/Y 2082/83",
+    "listItem": "Income Voucher",
+    "nextVoucherNum": "1",
+    "zeroMask": "000",
+    "isDefault": false,
+    "voucherPrefix": "IV",
+    "voucherPostfix": "NG"
+  }
+}

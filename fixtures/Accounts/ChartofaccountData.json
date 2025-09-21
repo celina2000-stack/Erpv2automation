@@ -1,0 +1,54 @@
+{
+  "ledgerGroupAccountName": "Restricted Fund Balance",
+  "ledgeritemAccountName":"Ordinary Share",
+  "coatax":{
+    "taxName": "Auto Tax",
+    "taxRate": "15",
+    "tdsType": "11112 Remuneration Income Tax",
+    "startDate": "08/20/2025",
+    "endDate": "08/28/2025"
+  },
+  "duplicateaccountnum":{
+    "parent": "Assets",
+    "accountNumber": "1.3",
+    "accountName": "Automation Test Account",
+    "currency": "NPR",
+    "transactionType": "Debit",
+    "glAccountUseType": "Ledger Item",
+    "relatedTo": "Balance Sheet",
+    "status": "Active",
+    "accountingyear":"A/Y 2081/82",
+    "Rate": "15",
+    "Forexamount": "100",
+    "obtransactionType": "Debit",
+    "openingBalance": "5000",
+    "tax":false,
+    "taxName": "Auto Tax",
+    "taxRate": "15",
+    "tdsType": "11112 Remuneration Income Tax",
+    "startDate": "08/20/2025",
+    "endDate": "08/28/2025"
+  },
+  "coa":{
+    "parent": "Assets",
+    "accountNumber": "1.3",
+    "accountName": "Automation Test Account",
+    "currency": "NPR",
+    "transactionType": "Debit",
+    "glAccountUseType": "Ledger Item",
+    "relatedTo": "Balance Sheet",
+    "status": "Active",
+    "accountingyear":"A/Y 2081/82",
+    "Rate": "15",
+    "Forexamount": "100",
+    "obtransactionType": "Debit",
+    "openingBalance": "5000",
+    "tax":true,
+    "taxName": "Auto Tax",
+    "taxRate": "15",
+    "tdsType": "11112 Remuneration Income Tax",
+    "startDate": "08/20/2025",
+    "endDate": "08/28/2025"
+  }
+  
+}

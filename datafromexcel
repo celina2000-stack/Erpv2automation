@@ -1,0 +1,49 @@
+//{
+ // "url": "https://exolutusv2.exoerp.com/"
+//}
+//////excelReader.js
+const xlsx = require('xlsx');
+
+function readExcelDataBySheetName(filePath, sheetName) {
+  const workbook = xlsx.readFile(filePath);
+  const sheet = workbook.Sheets[sheetName];
+  if (!sheet) {
+    throw new Error(`Sheet "${sheetName}" not found`);
+  }
+  return xlsx.utils.sheet_to_json(sheet, { header: 1 });
+}
+
+function findValueByLabel(data, label) {
+  for (const row of data) {
+    for (let i = 0; i < row.length; i++) {
+      if (typeof row[i] === 'string' && row[i].trim() === label) {
+        return row[i + 1] !== undefined ? row[i + 1] : null;
+      }
+    }
+  }
+  return null;
+}
+
+module.exports = { readExcelDataBySheetName, findValueByLabel };
+
+//payrollverification.spec.js
+const { test } = require('@playwright/test');
+const { readExcelSheetRaw, findValueByLabel} = require('../utils/excelReader');
+
+test('Print first cell (A1) value from Excel', async () => {
+  const keysToPrint = [
+  'Gross Salary',
+  'Taxable Amount',
+  'SST',
+  'TDS',
+  'Total Deduction',
+  'Net Salary'
+];
+
+const data = readExcelSheetRaw('./testdata/payroll.xlsx');
+
+for (const key of keysToPrint) {
+  const value = findValueByLabel(data, key);
+  console.log(`${key}: ${value}`);
+}
+});

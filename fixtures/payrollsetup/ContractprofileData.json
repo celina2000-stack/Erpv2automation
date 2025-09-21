@@ -1,0 +1,126 @@
+{
+  "Employee with SSF Group": {
+    "contractProfileName": "Employee with SSF Group",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentType": "Monthly",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "60000"
+      },
+      {
+        "paymentItem": "SSF Benefit",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "20"
+      },
+      {
+        "paymentItem": "Festival Allowances",
+        "paymentType": "One-Time",
+        "paymentBasis": "Flat",
+        "rate": "60000"
+      }
+    ],
+    "deductions": [
+      {
+        "paymentItem": "SSF Deduction",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "31"
+      }
+    ]
+  },
+  "Employee with P/F Group": {
+    "contractProfileName": "Employee with P/F Group",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentType": "Monthly",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "60000"
+      },
+      {
+        "paymentItem": "Provident Fund Benefit",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "10"
+      },
+      {
+        "paymentItem": "Festival Allowances",
+        "paymentType": "One-Time",
+        "paymentBasis": "Flat",
+        "rate": "60000"
+      }
+    ],
+    "deductions": [
+      {
+        "paymentItem": "Provident Fund Deduction",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "20"
+      }
+    ]
+  },
+  "LT Group - P/F ": {
+    "contractProfileName": "LT Group - P/F ",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentType": "Monthly",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "60000"
+      },
+      {
+        "paymentItem": "Festival Allowances",
+        "paymentType": "One-Time",
+        "paymentBasis": "Flat",
+        "rate": "100000"
+      },
+      {
+        "paymentItem": "Provident Fund Benefit",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "10"
+      }
+    ],
+    "deductions": [
+      {
+        "paymentItem": "Provident Fund Deduction",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "20"
+      }
+    ]
+  },
+  "LT Group - SSF": {
+    "contractProfileName": "LT Group - SSF",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentType": "Monthly",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "95000"
+      },
+      {
+        "paymentItem": "SSF Benefit",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "20"
+      },
+      {
+        "paymentItem": "Festival Allowances",
+        "paymentType": "One-Time",
+        "paymentBasis": "Flat",
+        "rate": "95000"
+      }
+    ],
+    "deductions": [
+      {
+        "paymentItem": "SSF Deduction",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "31"
+      }
+    ]
+  }
+}

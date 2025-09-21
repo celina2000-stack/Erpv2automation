@@ -1,0 +1,43 @@
+{
+  "validData": {
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentType": "Monthly",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "60000",
+        "status": "Active"
+      },
+      {
+        "paymentItem": "SSF Benefit",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "20",
+        "status": "Active"
+      },
+      {
+        "paymentItem": "Festival Allowances",
+        "paymentType": "One-Time",
+        "paymentBasis": "Flat",
+        "rate": "60000",
+        "status": "Active"
+      }
+    ],
+    "deductions": [
+      {
+        "paymentItem": "SSF Deduction",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "31",
+        "status": "Active"
+      }
+    ]
+  },
+  "validRebate": [
+  {
+    "insurance": "Life Insurance",
+    "insuranceAmount": "5000"
+  }
+]
+
+}

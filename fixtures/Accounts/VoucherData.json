@@ -1,0 +1,88 @@
+{
+    "noAmount": {
+        "narration": "No amount test",
+        "voucherDate": "8/29/2025",
+        "dueDate": "9/5/2025",
+        "gridRow": [
+        {
+            "glAccount": "1.3 Automation Test Account",
+            "debit": "",
+            "credit": "",
+            "project": "Development Project",
+            "note": "",
+            "tags": "",
+            "details": ""
+        }]
+    },
+    "emptygrid":{
+        "narration": "Test narration",
+        "voucherDate": "8/28/2025",
+        "dueDate": "9/5/2025"
+    }
+    ,
+    "debitCreditSameRow": {
+        "narration": "Test both debit and credit in one row",
+        "voucherDate": "8/28/2025",
+        "dueDate": "9/5/2025",
+        "gridRow":[ {
+            "glAccount": "3.2.4100 Training",
+            "debit": "2000",
+            "credit": "2000",
+            "project": "Development Project",
+            "note": "",
+            "tags": "",
+            "details": ""
+        }]
+    } ,
+    "debitCreditNotEqual": {
+        "narration": "Test debit and credit not equal",
+        "voucherDate": "8/29/2025",
+        "dueDate": "9/5/2025",
+        "gridRow": [
+            {
+                "glAccount": "3.2.4100 Training",
+                "debit": "2000",
+                "credit": "",
+                "project": "Development Project",
+                "note": "",
+                "tags": "",
+                "details": ""
+            },
+            {
+                "glAccount": "3.2.4100 Training",
+                "debit": "",
+                "credit": "1000",
+                "project": "Development Project",
+                "note": "",
+                "tags": "",
+                "details": ""
+            }
+        ]
+    },
+    "statusTest": {
+        "narration": "Status test",
+        "voucherDate": "8/29/2025",
+        "dueDate": "9/5/2025",
+        "gridRow": [
+            {
+                "glAccount": "3.2.4100 Training",
+                "debit": "1000",
+                "credit": "0",
+                "project": "Development Project",
+                "note": "",
+                "tags": "",
+                "details": ""
+            },
+            {
+                "glAccount": "3.2.4100 Training",
+                "debit": "0",
+                "credit": "1000",
+                "project": "Development Project",
+                "note": "",
+                "tags": "",
+                "details": ""
+            }
+        ]
+    }
+    
+}
