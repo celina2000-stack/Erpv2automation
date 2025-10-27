@@ -52,5 +52,14 @@
     "isDefault": false,
     "voucherPrefix": "IV",
     "voucherPostfix": "NG"
+  },
+  "searchitem":{
+    "nextVoucherNum":"3",
+    "zeroMask":"0000",
+    "voucherprefix":"jv",
+    "voucherpostfix":"NG",
+    "accountingYear":"A/Y 2081/82",
+    "vouchertype":"Journal Voucher",
+    "invalid":"invalid"
   }
 }

@@ -11,7 +11,9 @@ const chartofaccountData = require('../../fixtures/Accounts/ChartofaccountData.j
 const LoginPage = require('../../pages/common/LoginPage');
 const loginData = require('../../fixtures/loginData.json');
 const { performLogin } = require('../../utils/loginHelper');
-
+test.use({
+  ignoreHTTPSErrors: true,   // ✅ Allow navigation to sites with invalid SSL
+});
 test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     await page.goto('https://exolutusv2.exoerp.com');

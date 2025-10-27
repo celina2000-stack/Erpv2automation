@@ -1,0 +1,18 @@
+{
+  "duplicatejobposition": {
+    "name": "Managing director",
+    "status": "InActive",
+    "orderNo": "5"
+  },
+  "newjobposition": {
+    "name": "QA Engineer",
+    "status": "Active",
+    "orderNo": "10"
+  },
+  "searchitem":{
+    "jobpositionname":"admin",
+    "orderno":"1",
+    "status":"inactive",
+    "invalid":"teacher"
+  }
+}

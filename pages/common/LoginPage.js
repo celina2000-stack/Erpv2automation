@@ -17,7 +17,7 @@ class LoginPage {
         await this.passwordInput.fill(password);
         await this.page.waitForTimeout(1000);
         await this.loginButton.click();
-        await this.page.waitForTimeout(8000);
+        await this.page.waitForTimeout(5000);
     }
 
     async verifyLogin() {

@@ -1,0 +1,143 @@
+{
+    "duplicatetax": {
+      "taxname": "Income Tax",
+      "displayname": "TDS",
+      "glaccount": "2.1.2100 General Reserve",
+      "tdstype":"11112 Remuneration Income Tax",
+      "maritalstatus":"Married"
+    },
+    "invalidrate": {
+      "taxname": "Income Tax",
+      "displayname": "TDS",
+      "glaccount": "2.1.2100 General Reserve",
+      "tdstype":"11112 Remuneration Income Tax",
+      "maritalstatus":"Married",
+      "taxrate": [
+      {
+        "rate": "-10",
+        "lowerlimit": "0",
+        "upperlimit": "60000",
+        "startdate":"10/08/2025",
+        "enddate":"10/09/2027"
+      }
+    ]
+    },
+    "ratezero": {
+        "taxname": "Income Tax",
+        "displayname": "TDS",
+        "glaccount": "2.1.2100 General Reserve",
+        "tdstype":"11112 Remuneration Income Tax",
+        "maritalstatus":"Married",
+        "taxrate": [
+        {
+          "rate": "0",
+          "lowerlimit": "0",
+          "upperlimit": "60000",
+          "startdate":"10/08/2025",
+          "enddate":"10/09/2027"
+        }
+      ]
+      },
+      "lowerlimitgreater": {
+        "taxname": "Income Tax",
+        "displayname": "TDS",
+        "glaccount": "2.1.2100 General Reserve",
+        "tdstype":"11112 Remuneration Income Tax",
+        "maritalstatus":"Married",
+        "taxrate": [
+        {
+          "rate": "1",
+          "lowerlimit": "1122",
+          "upperlimit": "6",
+          "startdate":"10/08/2025",
+          "enddate":"10/09/2027"
+        }
+      ]
+      },
+      "rategreater39": {
+        "taxname": "Income Tax",
+        "displayname": "TDS",
+        "glaccount": "2.1.2100 General Reserve",
+        "tdstype":"11112 Remuneration Income Tax",
+        "maritalstatus":"Married",
+        "taxrate": [
+        {
+          "rate": "50",
+          "lowerlimit": "5",
+          "upperlimit": "600",
+          "startdate":"10/08/2025",
+          "enddate":"10/09/2027"
+        }
+      ]
+      },
+      "startdateafter": {
+        "taxname": "Income Tax",
+        "displayname": "TDS",
+        "glaccount": "2.1.2100 General Reserve",
+        "tdstype":"11112 Remuneration Income Tax",
+        "maritalstatus":"Married",
+        "taxrate": [
+        {
+          "rate": "1",
+          "lowerlimit": "0",
+          "upperlimit": "60000",
+          "startdate":"10/08/2025",
+          "enddate":"10/09/2024"
+        }
+      ]
+      },
+      "multipletaxrate": {
+      "taxname": "Income Tax",
+      "displayname": "TDS",
+      "glaccount": "2.1.2100 General Reserve",
+      "tdstype":"11123 Private Limited",
+      "maritalstatus":"Married",
+      "taxrate": [
+      {
+        "rate": "5",
+        "lowerlimit": "0",
+        "upperlimit": "60000",
+        "startdate":"10/08/2025",
+        "enddate":"10/09/2027"
+      },
+      {
+       "rate": "5",
+        "lowerlimit": "60000",
+        "upperlimit": "100000",
+        "startdate":"10/08/2025",
+        "enddate":"10/09/2027"
+      }
+    ]
+    },
+    "newtax": {
+      "taxname": "Test Tax",
+      "displayname": "TDS",
+      "glaccount": "2.1.2100 General Reserve",
+      "tdstype":"11123 Private Limited",
+      "maritalstatus":"Married",
+      "taxrate": [
+      {
+        "rate": "5",
+        "lowerlimit": "0",
+        "upperlimit": "60000",
+        "startdate":"10/08/2025",
+        "enddate":"10/09/2027"
+      },
+      {
+       "rate": "5",
+        "lowerlimit": "60000",
+        "upperlimit": "100000",
+        "startdate":"10/08/2025",
+        "enddate":"10/09/2027"
+      }
+    ]
+    },
+    "searchitem":{
+      "taxname":"Income Tax",
+      "displayname":"TDS",
+      "glaccount": "land",
+      "tdstype":"11112 Remuneration Income Tax",
+      "maritalstatus":"Married",
+      "invalid":"test tax"
+    }
+  }

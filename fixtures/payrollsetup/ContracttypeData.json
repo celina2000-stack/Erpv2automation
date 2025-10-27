@@ -1,0 +1,14 @@
+{
+  "duplicatecontracttype": {
+    "contractname": "Annual",
+    "contracttype": "LT Group"
+  },
+  "newcontracttype": {
+    "contractname": "Annual",
+    "contracttype": "Monthly Contract"
+  },
+  "searchitem":{
+    "value":"annual",
+    "invalid":"aaaaaa"
+  }
+}

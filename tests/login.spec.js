@@ -2,7 +2,9 @@ const { test, expect } = require('@playwright/test');
 const loginData = require('../fixtures/loginData.json');
 const LoginPage = require('../pages/common/LoginPage');
 const { performLogin, performInvalidLogin, performEmptyLogin, performUsernameEmptyLogin, performPasswordEmptyLogin } = require('../utils/loginHelper');
-
+test.use({
+  ignoreHTTPSErrors: true,   // ✅ Allow navigation to sites with invalid SSL
+});
 test('Log in to the website with valid credentials', async ({ page }) => {
     const loginPage = new LoginPage(page);
 

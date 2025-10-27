@@ -22,13 +22,19 @@ const {
   calculateContractSalaryFromFixture,
   contractdate, verifycontractdate
 } = require('../../utils/humanresource/serviceAssignmentHelper');
+const { verifySearch, verifyinvalidsearch } = require('../../utils/searchHelper');
 
 const loginData = require('../../fixtures/loginData.json');
 const employeeData = require('../../fixtures/humanresource/EmployeeData.json');
 const contractProfileData = require('../../fixtures/payrollsetup/ContractprofileData.json');
 const serviceassignmentdata = require('../../fixtures/humanresource/ServiceAssignmentData.json');
 const benefitsDeductionsData = require('../../fixtures/humanresource/benefitsDeductionsData.json');
+const SortPage = require('../../pages/common/SortingPage');
+const { verifySortColumn, verifySortForAllColumns } = require('../../utils/sortingHelper');
 
+test.use({
+  ignoreHTTPSErrors: true,   // ✅ Allow navigation to sites with invalid SSL
+});
 test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     await page.goto('https://exolutusv2.exoerp.com');
@@ -112,10 +118,96 @@ test.describe.skip('Employee creation tests', () => {
     //await employeePage.clicknext();
     await verifyDuplicatePanNumberError(employeePage, expect);
   });
+  
+  test('Employee search functionality by name', async ({ page }) => {
+    const employeePage = new EmployeePage(page);
+    await navigateToHumanResourceAndEmployees(employeePage);
+    await page.waitForTimeout(2000);
+    await employeePage.setShowEntriesTo25('//*[@id="EmployeesTable_length"]/label/select');
+    const searchValue = employeeData.searchitem.name;
+    await verifySearch(
+        page,
+        '#EmployeesTableFilter',
+        '#GetEmployeesButton',
+        searchValue
+    );
+  });
+  test('Employee search functionality by address', async ({ page }) => {
+    const employeePage = new EmployeePage(page);
+    await navigateToHumanResourceAndEmployees(employeePage);
+    await page.waitForTimeout(2000);
+    await employeePage.setShowEntriesTo25('//*[@id="EmployeesTable_length"]/label/select');
+    const searchValue = employeeData.searchitem.address;
+    await verifySearch(
+        page,
+        '#EmployeesTableFilter',
+        '#GetEmployeesButton',
+        searchValue
+    );
+  });
+  test('Employee search functionality by date of birth', async ({ page }) => {
+    const employeePage = new EmployeePage(page);
+    await navigateToHumanResourceAndEmployees(employeePage);
+    await page.waitForTimeout(2000);
+    await employeePage.setShowEntriesTo25('//*[@id="EmployeesTable_length"]/label/select');
+    const searchValue = employeeData.searchitem.dateOfBirth;
+    await verifySearch(
+        page,
+        '#EmployeesTableFilter',
+        '#GetEmployeesButton',
+        searchValue
+    );
+  });
+  test('Employee search functionality by Gender', async ({ page }) => {
+    const employeePage = new EmployeePage(page);
+    await navigateToHumanResourceAndEmployees(employeePage);
+    await page.waitForTimeout(2000);
+    await employeePage.setShowEntriesTo25('//*[@id="EmployeesTable_length"]/label/select');
+    const searchValue = employeeData.searchitem.gender;
+    await verifySearch(
+        page,
+        '#EmployeesTableFilter',
+        '#GetEmployeesButton',
+        searchValue
+    );
+  });
+  test('Employee search functionality by username', async ({ page }) => {
+    const employeePage = new EmployeePage(page);
+    await navigateToHumanResourceAndEmployees(employeePage);
+    await page.waitForTimeout(2000);
+    await employeePage.setShowEntriesTo25('//*[@id="EmployeesTable_length"]/label/select');
+    const searchValue = employeeData.searchitem.username;
+    await verifySearch(
+        page,
+        '#EmployeesTableFilter',
+        '#GetEmployeesButton',
+        searchValue
+    );
+  });
+  test('Vendor invalid search', async ({ page }) => {
+    const employeePage = new EmployeePage(page);
+    await navigateToHumanResourceAndEmployees(employeePage);
+    await page.waitForTimeout(2000);
+    const searchValue = employeeData.searchitem.invalid;
+    await verifyinvalidsearch(
+        page,
+        '#EmployeesTableFilter',
+        '#GetEmployeesButton',
+        searchValue
+    );  
+  });
+
+  test.only('Verify sorting for all columns in Employee module', async ({ page }) => {
+    const sortPage = new SortPage(page);
+    const employeePage = new EmployeePage(page);
+    await navigateToHumanResourceAndEmployees(employeePage);
+    await page.waitForTimeout(2000);
+    await verifySortForAllColumns(sortPage);    
+  });
 
 });
 
-test.describe.serial('Employee service assignment tests', () => {
+test.describe('Employee service assignment tests', () => {
   test('Verify that the service assignment form shows validation errors when required fields are left blank', async ({ page }) => {
       const serviceAssignmentPage = new ServiceAssignmentPage(page);
       const employeePage = new EmployeePage(page);
@@ -349,6 +441,16 @@ test('Verify that system prevents two active service assignment.', async ({ page
   const warningDialog = page.locator('//*[@id="kt_app_body"]/div[23]/div');
   await expect(warningDialog).toBeVisible();
   await expect(warningDialog).toContainText('There is an existing active service assignment for this employee!');
+});
+
+test.only('Verify sorting for all columns in service assignment of Employee module', async ({ page }) => {
+  const sortPage = new SortPage(page);
+  const employeePage = new EmployeePage(page);
+  await navigateToHumanResourceAndEmployees(employeePage);
+  await employeePage.editEmployeeByName(employeeData.validEmployeeName);
+  await employeePage.clicknext();
+  await page.waitForTimeout(2000);
+  await verifySortForAllColumns(sortPage);    
 });
 });
 

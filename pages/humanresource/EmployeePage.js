@@ -33,6 +33,12 @@ class EmployeePage {
         await this.page.waitForTimeout(2000);
         await expect(this.page).toHaveURL(/.*Employees.*/);
     }
+    async setShowEntriesTo25(showentries) {
+        // Select '25' from the Show entries dropdown
+        const showEntriesDropdown = this.page.locator(showentries);
+        await showEntriesDropdown.selectOption('25');
+        await this.page.waitForTimeout(500); // Wait for grid to update
+    }
     async clickCreateButton() {
         await this.createButton.click();
         await this.page.waitForTimeout(5000); // Wait for the create button action to complete

@@ -83,6 +83,16 @@
                 "details": ""
             }
         ]
+    },
+    "searchitem":{
+        "vouchername":"Journal Voucher",
+        "vouchernumber":"jv",
+        "debitamount":"1000",
+        "creditamount":"4000",
+        "voucherdate":"2025-09-21",
+        "posteddate":"2025-09-04",
+        "status":"Checked (Unposted)",
+        "invalid":"invalid"
     }
     
 }

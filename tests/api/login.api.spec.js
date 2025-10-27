@@ -8,7 +8,7 @@ const CURRENT_LOGIN_INFO_API = BASE_URL + '/api/services/app/Session/GetCurrentL
 
 test.describe('Backend Login API Tests', () => {
   test('Login with valid credentials', async () => {
-    const apiContext = await request.newContext();
+    const apiContext = await request.newContext({ ignoreHTTPSErrors: true });
 
     // Step 1: GET login page to get CSRF token
     const getResponse = await apiContext.get(LOGIN_PAGE);
@@ -42,8 +42,8 @@ test.describe('Backend Login API Tests', () => {
 
   });
 
-  test.only('Login with invalid credentials', async () => {
-  const apiContext = await request.newContext();
+  test('Login with invalid credentials', async () => {
+  const apiContext = await request.newContext({ ignoreHTTPSErrors: true });
 
   // Get CSRF token
   const getResponse = await apiContext.get(LOGIN_PAGE);

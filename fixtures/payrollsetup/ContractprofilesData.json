@@ -1,0 +1,116 @@
+{
+  "duplicatePaymentItems": {
+    "contractProfileName": "test1",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "60000"
+      },
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "20"
+      }
+    ]
+  },
+  "duplicateDeductionItems": {
+    "contractProfileName": "test2",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "60000"
+      }
+    ],
+    "deductions": [
+      {
+        "paymentItem": "SSF Deduction",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "31"
+      },
+      {
+        "paymentItem": "SSF Deduction",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "25"
+      }
+    ]
+  },
+  "validPaymentItems": {
+    "contractProfileName": "Test Valid Profile",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "50000"
+      },
+      {
+        "paymentItem": "SSF Benefit",
+        "paymentType": "Monthly",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "20"
+      }
+    ],
+    "deductions": [
+      {
+        "paymentItem": "SSF Deduction",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "31"
+      }
+    ]
+  },
+  "invalidPaymentItemsWithoutBasic": {
+    "contractProfileName": "Test Invalid Profile",
+    "benefits": [
+      {
+        "paymentItem": "SSF Benefit",
+        "paymentBasis": "Percentage of Basic",
+        "rate": "20"
+      }
+    ]
+  },
+  "duplicateContractProfile": {
+    "contractProfileName": "Employee with SSF Group",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "60000"
+      }
+    ]
+  },
+  "validContractProfile": {
+    "contractProfileName": "Test Contract Profile",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "50000"
+      }
+    ]
+  },
+  "unsavedGridData": {
+    "contractProfileName": "Test Unsaved Grid Profile",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "50000"
+      }
+    ]
+  },
+  "cancelledFormData": {
+    "contractProfileName": "Test Cancelled Form Profile",
+    "benefits": [
+      {
+        "paymentItem": "Basic Salary",
+        "paymentBasis": "Worked Days Basis",
+        "rate": "50000"
+      }
+    ]
+  },
+  "searchitem":{
+    "contractname":"employee",
+    "invalid":"grouppp"
+  }
+}

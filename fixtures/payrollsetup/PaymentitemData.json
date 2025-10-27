@@ -1,0 +1,40 @@
+{
+  "duplicatePaymentItem": {
+    "paymentItemName": "Performance Bonus",
+    "paymentItemType": "Benefit",
+    "paymentType": "Monthly",
+    "paymentBasis": ["Worked Days Basis" ],
+    "taxableType": "Taxable"
+  },
+  "validtaxablePaymentItem": {
+    "paymentItemName": "Performance Bonus",
+    "paymentItemType": "Benefit",
+    "paymentType": "One-Time",
+    "paymentBasis": ["Flat"],
+    "taxableType": "Taxable"
+  },
+  "validnontaxablePaymentItem": {
+    "paymentItemName": "Health Allowance",
+    "paymentItemType": "Benefit",
+    "paymentType": "Monthly",
+    "paymentBasis": ["Flat"],
+    "taxableType": "Non-Taxable"
+  },
+  "validdeductionPaymentItem": {
+    "paymentItemName": "Health Insurance",
+    "paymentItemType": "Deduction",
+    "paymentType": "Monthly",
+    "paymentBasis": ["Flat"],
+    "taxableType": "Non-Taxable"
+  },
+  "searchitem":{
+    "paymentItemName":"allowance",
+    "systemname":"LeaveEncashment",
+    "orderNo":"5",
+    "paymentItemType":"Benefit",
+    "paymenttypeName": "monthly",
+    "taxabletype":"taxable",
+    "paymentbasis":"flat",
+    "invalid":"health insurance"
+  }
+}

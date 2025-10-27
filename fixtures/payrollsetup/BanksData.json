@@ -1,0 +1,18 @@
+{
+    "duplicatebank": {
+      "bankname": "Prabhu Bank Limited",
+      "status": "InActive",
+      "glaccount":"2.1.2100 General Reserve"
+    },
+    "newbank": {
+      "bankname": "Nic asia test",
+      "status": "InActive",
+      "glaccount":"2.1.2100 General Reserve"
+    },
+    "searchitem":{
+      "bankname":"Nic asia test",
+      "glaccount":"General Reserve",
+      "status":"Active",
+      "invalid":"everest"
+    }
+  }

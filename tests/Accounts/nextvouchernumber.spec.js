@@ -17,13 +17,19 @@ const nextvoucherData = require('../../fixtures/Accounts/NextvoucherData.json');
 const loginData = require('../../fixtures/loginData.json');
 const LoginPage = require('../../pages/common/LoginPage');
 const { performLogin } = require('../../utils/loginHelper');
+const { verifySearch, verifyinvalidsearch } = require('../../utils/searchHelper');
+const SortPage = require('../../pages/common/SortingPage');
+const { verifySortColumn, verifySortForAllColumns } = require('../../utils/sortingHelper');
 
+test.use({
+    ignoreHTTPSErrors: true,   // ✅ Allow navigation to sites with invalid SSL
+  });
 test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     await page.goto('https://exolutusv2.exoerp.com');
     await performLogin(loginPage, loginData.admin);
   });
-test.only('Should show required field error when saving Next voucher number with blank fields', async ({ page }) => {
+test('Should show required field error when saving Next voucher number with blank fields', async ({ page }) => {
     const nextvouchernumberPage = new NextvouchernumberPage(page);
     await navigateToNextVoucherNumbers(nextvouchernumberPage);
     await openCreateNewNextVoucherNumber(nextvouchernumberPage);
@@ -120,4 +126,96 @@ test('Verify system prevents deletion of Next Voucher Number setup if vouchers h
     // Step 3: Confirm setup still exists
     const stillExists = await nextvouchernumberPage.findRowByYearAndListItem(accountingYear, listItem);
     expect(stillExists).not.toBeNull();
+});
+
+test('Next voucher number search functionality by Next voucher num', async ({ page }) => {
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    const searchValue = nextvoucherData.searchitem.nextVoucherNum;
+    await verifySearch(
+        page,
+        '#NextVoucherNumbersTableFilter',
+        '#GetNextVoucherNumbersButton',
+        searchValue
+    );
+});
+test('Next voucher number search functionality by zero mask', async ({ page }) => {
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    const searchValue = nextvoucherData.searchitem.zeroMask;
+    await verifySearch(
+        page,
+        '#NextVoucherNumbersTableFilter',
+        '#GetNextVoucherNumbersButton',
+        searchValue
+    );
+});
+test('Next voucher number search functionality by voucher perfix', async ({ page }) => {
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    const searchValue = nextvoucherData.searchitem.voucherprefix;
+    await verifySearch(
+        page,
+        '#NextVoucherNumbersTableFilter',
+        '#GetNextVoucherNumbersButton',
+        searchValue
+    );
+});
+test('Next voucher number search functionality by voucher postfix', async ({ page }) => {
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    const searchValue = nextvoucherData.searchitem.voucherpostfix;
+    await verifySearch(
+        page,
+        '#NextVoucherNumbersTableFilter',
+        '#GetNextVoucherNumbersButton',
+        searchValue
+    );
+});
+test('Next voucher number search functionality by accounting year', async ({ page }) => {
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    const searchValue = nextvoucherData.searchitem.accountingYear;
+    await verifySearch(
+        page,
+        '#NextVoucherNumbersTableFilter',
+        '#GetNextVoucherNumbersButton',
+        searchValue
+    );
+});
+test('Next voucher number search functionality by voucher type', async ({ page }) => {
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    const searchValue = nextvoucherData.searchitem.vouchertype;
+    await verifySearch(
+        page,
+        '#NextVoucherNumbersTableFilter',
+        '#GetNextVoucherNumbersButton',
+        searchValue
+    );
+});
+test('Next voucher number invalid search', async ({ page }) => {
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    const searchValue = nextvoucherData.searchitem.invalid;
+    await verifyinvalidsearch(
+        page,
+        '#NextVoucherNumbersTableFilter',
+        '#GetNextVoucherNumbersButton',
+        searchValue
+    ); 
+});
+test.only('Verify sorting for all columns in Next Voucher module', async ({ page }) => {
+    const sortPage = new SortPage(page);
+    const nextvouchernumberPage = new NextvouchernumberPage(page);
+    await navigateToNextVoucherNumbers(nextvouchernumberPage);
+    await page.waitForTimeout(2000);
+    await verifySortForAllColumns(sortPage);    
 });

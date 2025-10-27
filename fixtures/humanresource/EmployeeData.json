@@ -16,7 +16,7 @@
         "repeatPassword": "password123",
         "role": "User"
     },
-    "validEmployeeName": "Gita Sharma",
+    "validEmployeeName": "Sita Rimal",
     "invalidEmailPhone": {
         "firstName": "John",
         "lastName": "Doe",
@@ -154,6 +154,14 @@
         "password": "password123",
         "repeatPassword": "password123",
         "role": "User"
+    },
+    "searchitem":{
+        "name":"sofiya",
+        "address":"kath",
+        "dateOfBirth":"2025",
+        "gender":"Female",
+        "username":"gita",
+        "invalid":"invalid"
     }
 
 

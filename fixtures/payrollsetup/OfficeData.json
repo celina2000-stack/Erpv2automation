@@ -1,0 +1,72 @@
+{
+  "invalidTimeOffice": {
+    "office": "Government Office",
+    "officeName": "Test Office",
+    "startTime": "10:00",
+    "endTime": "09:00",
+    "breakStartTime": "00:00",
+    "breakEndTime": "00:00",
+    "status": "Active",
+    "weekendDays": ["Sunday", "Saturday"],
+    "workingHours": "8",
+    "workingDaysPerMonth": "22"
+  },
+  "breakTimeInvalid": {
+    "office": "Government Office",
+    "officeName": "Test Office",
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "breakStartTime": "10:00",
+    "breakEndTime": "09:00",
+    "status": "Active",
+    "weekendDays": ["Sunday", "Saturday"],
+    "workingHours": "8",
+    "workingDaysPerMonth": "22"
+  },
+  "breakTimeOutsideOfficeHour": {
+    "office": "Government Office",
+    "officeName": "Test Office",
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "breakStartTime": "08:00",
+    "breakEndTime": "19:00",
+    "status": "Active",
+    "weekendDays": ["Sunday", "Saturday"],
+    "workingHours": "8",
+    "workingDaysPerMonth": "22"
+  },
+  "duplicateOffice": {
+    "office": "Government Office",
+    "officeName": "IT department",
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "breakStartTime": "12:00",
+    "breakEndTime": "13:00",
+    "status": "Active",
+    "weekendDays": ["Sunday", "Saturday"],
+    "workingHours": "8",
+    "workingDaysPerMonth": "22"
+  },
+  "newOffice": {
+    "office": "Operation",
+    "officeName": "Exo test",
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "breakStartTime": "12:00",
+    "breakEndTime": "13:00",
+    "status": "Active",
+    "weekendDays": ["Sunday", "Saturday"],
+    "workingHours": "8",
+    "workingDaysPerMonth": "22"
+  },
+  "searchitem":{
+    "officename":"test",
+    "starttime":"09:00AM",
+    "endtime":"06:00PM",
+    "workdays":"22",
+    "workhour":"8",
+    "headoffice":"operation",
+    "status":"inactive",
+    "invalid":"invalid"
+  }
+}

@@ -11,7 +11,7 @@ const payrolldata = require('../../fixtures/humanresource/payrollData.json');
 test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     await page.goto('https://exolutusv2.exoerp.com');
-    await performLogin(loginPage);
+    await performLogin(loginPage, loginData.valid);
     await loginPage.verifyLogin();
 });
 test('Verify payroll', async ({ page }) => {

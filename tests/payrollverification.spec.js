@@ -8,7 +8,9 @@ const PayrollverificationPage = require('../pages/humanresource/Payrollverificat
 const PayrollPage = require('../pages/humanresource/PayrollPage');
 const loginData = require('../fixtures/loginData.json');
 const { log } = require('console');
-
+test.use({
+  ignoreHTTPSErrors: true,   // ✅ Allow navigation to sites with invalid SSL
+});
 test.describe('Payroll Verification Test', () => {
     test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
